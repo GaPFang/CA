@@ -37,6 +37,7 @@ switch:
     beq t0, x0, power
     addi t0, t0, -1
     beq t0, x0, factorial
+    jal x0, exit
 
 addition:
     add s3, s0, s2
