@@ -23,20 +23,20 @@ __start:
 #                                 #
 ###################################
 switch:
-    addi t0, s1, 0
-    beq t0, x0, addition
-    addi t0, t0, -1
-    beq t0, x0, subtraction
-    addi t0, t0, -1
-    beq t0, x0, multiplication
-    addi t0, t0, -1
-    beq t0, x0, division
-    addi t0, t0, -1
-    beq t0, x0, minimum
-    addi t0, t0, -1
-    beq t0, x0, power
-    addi t0, t0, -1
-    beq t0, x0, factorial
+    addi s5, s1, 0
+    beq s5, x0, addition
+    addi s5, s5, -1
+    beq s5, x0, subtraction
+    addi s5, s5, -1
+    beq s5, x0, multiplication
+    addi s5, s5, -1
+    beq s5, x0, division
+    addi s5, s5, -1
+    beq s5, x0, minimum
+    addi s5, s5, -1
+    beq s5, x0, power
+    addi s5, s5, -1
+    beq s5, x0, factorial
     jal x0, exit
 
 addition:
