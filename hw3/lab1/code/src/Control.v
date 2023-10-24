@@ -1,14 +1,15 @@
-module Control (
-    input clk,
-    input [6:0] opcode,
-    output ALUSrc,
-    output MemtoReg,
-    output RegWrite,
-    output MemRead,
-    output MemWrite,
-    output Branch,
-    output [1:0] ALUOp
-);
+module Control (clk, opcode, ALUSrc, MemtoReg, RegWrite, MemRead, MemWrite, Branch, ALUOp);
+
+    input clk;
+    input [6:0] opcode;
+    output reg ALUSrc;
+    output reg MemtoReg;
+    output reg RegWrite;
+    output reg MemRead;
+    output reg MemWrite;
+    output reg Branch;
+    output reg [1:0] ALUOp;
+
     always @(*) begin
         if (opcode[5]) begin
             ALUSrc = 1'b0;

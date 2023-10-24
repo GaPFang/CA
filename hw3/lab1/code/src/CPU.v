@@ -12,12 +12,11 @@ wire [31:0] pc_i, pc_o;
 wire [31:0] addr, instr;
 wire [31:0] RS1data, RS2data;
 wire [31:0] immed;
-wire [31:0] MUXtoALU;
+wire [31:0] MUXtoALU1, MUXtoALU2;
 wire ALUSrc, MemtoReg, RegWrite, MemRead, MemWrite, Branch;
 wire [1:0] ALUOp;
 wire [2:0] ALUCtl;
 wire [31:0] ALUout;
-
 
 Control Control(
     clk_i,
@@ -32,7 +31,7 @@ Control Control(
 );
 
 Adder Add_PC(
-    pc_0,
+    pc_o,
     {28'b0, 4'b0100},
     pc_i
 );
@@ -45,13 +44,13 @@ PC PC(
 );
 
 Instruction_Memory Instruction_Memory(
-    addr,
+    pc_o,
     instr
 );
 
 Registers Registers(
     rst_i,
-    clk_i
+    clk_i,
     instr[19:15],
     instr[24:20],
     instr[11:7],
@@ -61,11 +60,18 @@ Registers Registers(
     RS2data
 );
 
-MUX32 MUX_ALUSrc(
+MUX32 MUX_ALUSrc1(
+    RS1data,
+    {{27'b0}, instr[19:15]},
+    (ALUCtl[2] & ALUCtl[1] & (~ALUCtl[0])),
+    MUXtoALU1
+);
+
+MUX32 MUX_ALUSrc2(
     immed,
     RS2data,
     ALUSrc,
-    MUXtoALU
+    MUXtoALU2
 );
 
 Sign_Extend Sign_Extend(
@@ -76,7 +82,7 @@ Sign_Extend Sign_Extend(
 ALU ALU(
     ALUCtl,
     RS1data,
-    MUXtoALU,
+    MUXtoALU2,
     ALUout
 );
 
