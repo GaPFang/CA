@@ -1,11 +1,5 @@
 run:
-	@docker compose up
+	@docker-compose up
 
 clean:
-	@docker compose down --rmi local
-
-# run:
-# 	@docker-compose up
-
-# clean:
-# 	@docker-compose down --rmi local
+	@docker-compose down --rmi local
