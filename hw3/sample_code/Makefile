@@ -11,5 +11,5 @@ vvp: test
 gtk: vvp
 	gtkwave test.vcd&
 
-clear:
+clean:
 	rm -rf test *.vcd
