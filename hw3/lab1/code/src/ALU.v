@@ -34,7 +34,7 @@ module ALU (ALUCtl, a, b, out);
             end
             // srai
             3'b110: begin
-                result = a >>> b;
+                result = a >>> b[4:0];
             end
         endcase
     end
