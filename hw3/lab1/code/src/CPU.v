@@ -19,7 +19,6 @@ wire [2:0] ALUCtl;
 wire [31:0] ALUout;
 
 Control Control(
-    clk_i,
     instr[6:0],
     ALUSrc,
     MemtoReg,

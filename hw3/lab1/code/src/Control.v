@@ -1,6 +1,5 @@
-module Control (clk, opcode, ALUSrc, MemtoReg, RegWrite, MemRead, MemWrite, Branch, ALUOp);
+module Control (opcode, ALUSrc, MemtoReg, RegWrite, MemRead, MemWrite, Branch, ALUOp);
 
-    input clk;
     input [6:0] opcode;
     output reg ALUSrc;
     output reg MemtoReg;
