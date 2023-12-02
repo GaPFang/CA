@@ -1,8 +1,8 @@
 module ALU (ALUCtl, a, b, out);
 
     input [2:0] ALUCtl;
-    input [31:0] a;
-    input [31:0] b;
+    input signed [31:0] a;
+    input signed [31:0] b;
     output reg [31:0] out;
 
     initial begin
