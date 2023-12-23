@@ -1,0 +1,105 @@
+811c811,812
+< Predict =      0, IFID_Flush =      0
+---
+> Predict =      0, IFID_Flush =      1
+> ALU_out =      0
+831c832
+< cycle =     39, PC =     56, 
+---
+> cycle =     39, PC =     84, 
+852c853
+< cycle =     40, PC =     60, 
+---
+> cycle =     40, PC =     88, 
+873c874
+< cycle =     41, PC =     64, 
+---
+> cycle =     41, PC =     92, 
+894c895
+< cycle =     42, PC =     68, 
+---
+> cycle =     42, PC =     96, 
+915c916
+< cycle =     43, PC =     72, 
+---
+> cycle =     43, PC =    100, 
+936c937
+< cycle =     44, PC =     76, 
+---
+> cycle =     44, PC =    104, 
+957c958
+< cycle =     45, PC =     80, 
+---
+> cycle =     45, PC =    108, 
+978c979
+< cycle =     46, PC =     84, 
+---
+> cycle =     46, PC =    112, 
+999c1000
+< cycle =     47, PC =     88, 
+---
+> cycle =     47, PC =    116, 
+1020c1021
+< cycle =     48, PC =     92, 
+---
+> cycle =     48, PC =    120, 
+1041c1042
+< cycle =     49, PC =     96, 
+---
+> cycle =     49, PC =    124, 
+1062c1063
+< cycle =     50, PC =    100, 
+---
+> cycle =     50, PC =    128, 
+1083c1084
+< cycle =     51, PC =    104, 
+---
+> cycle =     51, PC =    132, 
+1104c1105
+< cycle =     52, PC =    108, 
+---
+> cycle =     52, PC =    136, 
+1125c1126
+< cycle =     53, PC =    112, 
+---
+> cycle =     53, PC =    140, 
+1146c1147
+< cycle =     54, PC =    116, 
+---
+> cycle =     54, PC =    144, 
+1167c1168
+< cycle =     55, PC =    120, 
+---
+> cycle =     55, PC =    148, 
+1188c1189
+< cycle =     56, PC =    124, 
+---
+> cycle =     56, PC =    152, 
+1209c1210
+< cycle =     57, PC =    128, 
+---
+> cycle =     57, PC =    156, 
+1230c1231
+< cycle =     58, PC =    132, 
+---
+> cycle =     58, PC =    160, 
+1251c1252
+< cycle =     59, PC =    136, 
+---
+> cycle =     59, PC =    164, 
+1272c1273
+< cycle =     60, PC =    140, 
+---
+> cycle =     60, PC =    168, 
+1293c1294
+< cycle =     61, PC =    144, 
+---
+> cycle =     61, PC =    172, 
+1314c1315
+< cycle =     62, PC =    148, 
+---
+> cycle =     62, PC =    176, 
+1335c1336
+< cycle =     63, PC =    152, 
+---
+> cycle =     63, PC =    180, 
