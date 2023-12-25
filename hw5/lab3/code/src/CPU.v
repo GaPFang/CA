@@ -73,7 +73,7 @@ MUX1 MUX_PC2(
 PC PC(
     rst_i,
     clk_i,
-    PCWrite,
+    PCWrite | predict_PCWrite_o,
     pc_i,
     pc_o
 );
